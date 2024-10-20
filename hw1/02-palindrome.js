@@ -2,11 +2,6 @@ const elem = document.querySelector("input");
 elem.addEventListener("input", handleInput);
 handleInput();
 
-const isPalindrome = (function () {
-  if (elem.value < 0) return false;
-  return true;
-})();
-
 function handleInput() {
   const isPalindrome = (function () {
     if (elem.value < 0) return false;
