@@ -1,6 +1,5 @@
 const elem = document.querySelector("input");
 elem.addEventListener("input", handleInput);
-handleInput();
 
 yes.hidden = true;
 no.hidden = true;
@@ -13,7 +12,7 @@ function handleInput() {
     return true;
   })();
 
-  if (elem.value < 0) {
+  if (elem.value == "" || elem.value < 0) {
     yes.hidden = true;
     no.hidden = true;
     error.hidden = false;
