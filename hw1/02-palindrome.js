@@ -2,16 +2,14 @@ const elem = document.querySelector("input");
 elem.addEventListener("input", handleInput);
 handleInput();
 
+yes.hidden = true;
+no.hidden = true;
+error.hidden = true;
+
 function handleInput() {
   const isPalindrome = (function () {
-    if (elem.value < 0) return false;
-
-    const numbers = elem.value.split("");
-    const numbersReversed = numbers.reverse();
-    const elemReversed = numbersReversed.join("");
-
+    const elemReversed = elem.value.split("").reverse().join("");
     if (elem.value != elemReversed) return false;
-
     return true;
   })();
 
