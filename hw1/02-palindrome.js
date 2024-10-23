@@ -8,15 +8,15 @@ error.hidden = true;
 function handleInput() {
   const isPalindrome = (function () {
     const elemReversed = elem.value.split("").reverse().join("");
-    if (elem.value != elemReversed) return false;
+    if (elem.value !== elemReversed) return false;
     return true;
   })();
 
-  if (elem.value == "" || elem.value < 0) {
+  if (elem.value === "" || elem.value < 0) {
     yes.hidden = true;
     no.hidden = true;
     error.hidden = false;
-  } else if (isPalindrome == true) {
+  } else if (isPalindrome === true) {
     yes.hidden = false;
     no.hidden = true;
     error.hidden = true;
