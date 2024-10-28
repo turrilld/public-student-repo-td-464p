@@ -8,15 +8,16 @@ function handleClick() {
   // Function to create the card once search returns a match
   function createCard(charecterName, charecterBirthYear) {
     let card = document.createElement("div");
+    card.className = "card m-1 p-1";
+    card.style = "width: 15rem;";
 
     let cardName = document.createElement("h5");
     cardName.textContent = charecterName;
+    cardName.className = "card-title m-1";
 
     let cardBirthYear = document.createElement("p");
     cardBirthYear.textContent = charecterBirthYear;
-
-    card.className = "card";
-    card.style = "width: 18rem;";
+    cardBirthYear.className = "card-text m-1";
 
     card.appendChild(cardName);
     card.appendChild(cardBirthYear);

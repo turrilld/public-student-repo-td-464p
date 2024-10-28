@@ -12,15 +12,15 @@
     <script defer src="02-search.js"></script>
   </head>
   <body class="bg-dark">
-    <main class="rounded container m-15 p-100px h-80 min-h-800 bg-white">
+    <main class="rounded container bg-white my-4 py-4 min-vh-50">
       <h1 class="text-center">Exercise 02 - Search</h1>
 
-      <div class="d-inline-flex p-2">
-        <label for="userInput">Search: </label>
-        <input class="form-control px-2" type="text" id="userInput" />
-        <input class="btn btn-primary px-2" type="button" id="search-button" value="Search" />
+      <div class="d-flex p-2 m-2 justify-content-center">
+        <label for="userInput" style="visibility: hidden">Search: </label>
+        <input class="form-control m-1" type="text" id="userInput" />
+        <input class="btn btn-primary m-1" type="button" id="search-button" value="Search" />
       </div>
-      <div id="card-holder" class="card-columns"></div>
+      <div class="card-columns" id="card-holder"></div>
     </main>
   </body>
 </html>
