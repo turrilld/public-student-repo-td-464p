@@ -1,36 +1,46 @@
 // Add your code here
-import charecters from "02-data.js";
-
 const cardHolder = document.getElementById("card-holder");
 const searchText = document.getElementById("userInput");
 const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", handleClick);
 
-window.alert("running: " + searchText);
 function handleClick() {
-  window.alert("search text: " + searchText);
+  // Function to create the card once search returns a match
+  function createCard(charecterName, charecterBirthYear) {
+    let card = document.createElement("div");
 
-  //   function createCard(charecterName, charecterBirthYear) {
-  //     window.alert("create card");
-  //     const card = document.createElement("div");
-  //     card.classList.add("card");
+    let cardName = document.createElement("h5");
+    cardName.textContent = charecterName;
 
-  //     const cardName = document.createElement("h5");
-  //     cardName.textContent = charecterName;
+    let cardBirthYear = document.createElement("p");
+    cardBirthYear.textContent = charecterBirthYear;
 
-  //     const cardBirthYear = document.createElement("p");
-  //     cardBirthYear.textContent = charecterBirthYear;
+    card.className = "card";
+    card.style = "width: 18rem;";
 
-  //     card.appendChild(cardTitle);
-  //     card.appendChild(cardContent);
+    card.appendChild(cardName);
+    card.appendChild(cardBirthYear);
 
-  //     return card;
-  //   }
+    return card;
+  }
 
-  //   charecters.array.forEach((charecter) => {
-  //     if (true) {
-  //       window.alert("outer if " + searchText);
-  //       cardHolder.appendChild(createCard(charecter.name, charecter.birth_year));
-  //     }
-  //   });
+  // Clear card holder before each search
+  cardHolder.innerHTML = "";
+
+  let resultCount = 0;
+
+  for (const charecter of characters) {
+    let charecterNameLower = charecter.name.toLowerCase();
+    let searchNameLower = searchText.value.toLowerCase();
+    let searchResult = charecterNameLower.search(searchNameLower);
+
+    if (searchResult >= 0 && searchNameLower !== "") {
+      let charecterCard = createCard(charecter.name, charecter.birth_year);
+      cardHolder.appendChild(charecterCard);
+      resultCount++;
+    }
+  }
+  if (resultCount === 0) {
+    cardHolder.innerHTML = "<p> No Charecters Found </p>";
+  }
 }
