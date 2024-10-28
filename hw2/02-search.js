@@ -9,7 +9,7 @@ function handleClick() {
   function createCard(charecterName, charecterBirthYear) {
     let card = document.createElement("div");
     card.className = "card m-1 p-1";
-    card.style = "width: 15rem;";
+    card.style = "width: 10rem;";
 
     let cardName = document.createElement("h5");
     cardName.textContent = charecterName;
