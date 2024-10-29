@@ -42,10 +42,10 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="programmingLanguages"
-              id="programmingLanguages"
+              value="Programming Languages"
+              id="programming-languages"
             />
-            <label class="form-check-label" for="programmingLanguages">
+            <label class="form-check-label" for="programming-languages">
               Programming Languages
             </label>
           </div>
@@ -53,31 +53,31 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="operatingSystems"
-              id="operatingSystems"
+              value="Operating Systems"
+              id="operating-systems"
             />
-            <label class="form-check-label" for="operatingSystems"> Operating Systems </label>
+            <label class="form-check-label" for="operating-systems"> Operating Systems </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
               type="checkbox"
-              value="fullStackWebDev"
-              id="fullStackWebDev"
+              value="Full Stack Web Development"
+              id="full-stack-web-dev"
             />
-            <label class="form-check-label" for="fullStackWebDev">
+            <label class="form-check-label" for="full-stack-web-dev">
               Full Stack Web Development
             </label>
           </div>
         </div>
         <div class="my-3">
-          <label for="anythingElse" class="form-label" style="font-weight: bold">
+          <label for="anything-else" class="form-label" style="font-weight: bold">
             Anything else?
           </label>
-          <textarea class="form-control" id="anythingElse" rows="3"></textarea>
+          <textarea class="form-control" id="anything-else" rows="3"></textarea>
         </div>
         <div class="d-flex gap-2">
-          <button type="button" class="btn btn-primary" style="display: block; width: 100%">
+          <button type="button" class="btn btn-primary" style="display: block; width: 100%" id="submit">
             Submit
           </button>
           <button class="btn btn-secondary" type="reset" style="display: block; width: 100%">
@@ -88,8 +88,7 @@
       <div class="modal" id="modal-dump">
         <!-- Modal content -->
         <div class="modal-content" id="modal-content">
-          <h3>Form Dump</h3>
-          <div id="text-dump"></div>
+          <div id="form-dump"></div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" id="modal-close">Close</button>
         </div>
