@@ -12,56 +12,88 @@
     <script defer src="05-form.js"></script>
   </head>
   <body class="bg-dark">
-    <main class="rounded container bg-light my-4 py-4 min-vh-50" style="max-width: 500px;"">
-      <form>
+    <main class="rounded container bg-light my-4 py-4 min-vh-50" style="max-width: 500px">
+      <form id="form">
         <h1 class="text-center my-4">Exercise 05 - Form</h1>
         <div class="mb-3">
-          <label for="full-name" class="form-label" style="font-weight: bold;">Full Name:</label>
+          <label for="full-name" class="form-label" style="font-weight: bold">Full Name:</label>
           <input class="form-control" type="text" id="full-name" />
         </div>
         <div class="mb-3">
-          <label for="email" class="form-label" style="font-weight: bold;">Email:</label>
+          <label for="email" class="form-label" style="font-weight: bold">Email:</label>
           <input class="form-control" type="email" id="email" />
         </div>
         <div class="mb-3">
-          <label for="registration-status" class="form-label" style="font-weight: bold;">Registration Status:</label>
-          <select class="form-select" id="registration-status"> 
+          <label for="registration-status" class="form-label" style="font-weight: bold"
+            >Registration Status:</label
+          >
+          <select class="form-select" id="registration-status">
             <option selected>Choose an Option</option>
             <option value="Registered">Registered</option>
             <option value="Waitlisted">Waitlisted</option>
             <option value="Dropped">Dropped</option>
           </select>
         </div>
-        <fieldset class="form-group">
-          <label class="form-label" style="font-weight: bold;">Have you taken any of the following courses?</label>
+        <div class="form-group">
+          <div class="form-label" style="font-weight: bold">
+            Have you taken any of the following courses?
+          </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="programmingLanguages" id="programmingLanguages">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="programmingLanguages"
+              id="programmingLanguages"
+            />
             <label class="form-check-label" for="programmingLanguages">
               Programming Languages
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="operatingSystems" id="operatingSystems">
-            <label class="form-check-label" for="operatingSystems">
-              Operating Systems
-            </label>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="operatingSystems"
+              id="operatingSystems"
+            />
+            <label class="form-check-label" for="operatingSystems"> Operating Systems </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="fullStackWebDev" id="fullStackWebDev">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="fullStackWebDev"
+              id="fullStackWebDev"
+            />
             <label class="form-check-label" for="fullStackWebDev">
               Full Stack Web Development
             </label>
-          </div>             
-        </fieldset>
+          </div>
+        </div>
         <div class="my-3">
-          <label for="anythingElse" class="form-label" style="font-weight: bold;">Anything else?</label>
+          <label for="anythingElse" class="form-label" style="font-weight: bold">
+            Anything else?
+          </label>
           <textarea class="form-control" id="anythingElse" rows="3"></textarea>
         </div>
         <div class="d-flex gap-2">
-            <button class="btn btn-primary" type="submit" style="display: block; width: 100%;">Submit</button>
-            <button class="btn btn-secondary" type="reset" style="display: block; width: 100%;">Reset</button>
-        </div>      
+          <button type="button" class="btn btn-primary" style="display: block; width: 100%">
+            Submit
+          </button>
+          <button class="btn btn-secondary" type="reset" style="display: block; width: 100%">
+            Reset
+          </button>
+        </div>
       </form>
+      <div class="modal" id="modal-dump">
+        <!-- Modal content -->
+        <div class="modal-content" id="modal-content">
+          <h3>Form Dump</h3>
+          <div id="text-dump"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="modal-close">Close</button>
+        </div>
+      </div>
     </main>
   </body>
 </html>
