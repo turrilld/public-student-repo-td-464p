@@ -4,6 +4,7 @@ const input = document.getElementById("userInput");
 input.addEventListener("keyup", handleKeyDown);
 
 function handleKeyDown() {
+  // This clears previous search results before starting the new result
   let text = searchableText.textContent || searchableText.innerText || "";
   searchableText.innerHTML = text;
 
