@@ -1,13 +1,16 @@
 // Add your code here
-const submitButton = document.getElementById("submit");
-submitButton.addEventListener("click", submit);
+const form = document.getElementById("form");
+form.addEventListener("submit", submit);
 
 const modalDump = document.getElementById("modal-dump");
 const modalClose = document.getElementById("modal-close");
 const formDump = document.getElementById("form-dump");
 modalClose.addEventListener("click", close);
 
-function submit() {
+function submit(event) {
+  //prevent submit from automatically closing the modal and clearing the form
+  event.preventDefault();
+
   formDump.innerHTML += `<p>Name: ${document.getElementById("full-name").value}</p>`;
   formDump.innerHTML += `<p>Email: ${document.getElementById("email").value}</p>`;
   formDump.innerHTML += `<p>Registration Status: ${
@@ -36,4 +39,6 @@ function submit() {
 function close() {
   formDump.innerHTML = "";
   modalDump.style.display = "none";
+  // reset the form on modal close
+  form.reset();
 }
