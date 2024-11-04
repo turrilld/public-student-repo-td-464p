@@ -35,7 +35,7 @@ function handleClick() {
     let searchNameLower = searchText.value.toLowerCase();
     let searchResult = charecterNameLower.search(searchNameLower);
 
-    if (searchResult >= 0 && searchNameLower !== "") {
+    if (searchResult >= 0 && searchNameLower !== "" && searchNameLower !== " ") {
       let charecterCard = createCard(charecter.name, charecter.birth_year);
       cardHolder.appendChild(charecterCard);
       resultCount++;

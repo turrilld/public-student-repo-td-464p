@@ -12,7 +12,7 @@ function handleKeyDown() {
   let textToSearch = searchableText.innerHTML;
   let searchResult = textToSearch.search(wordToSeachFor);
 
-  if (searchResult >= 0 && wordToSeachFor !== "") {
+  if (searchResult >= 0 && wordToSeachFor !== "" && wordToSeachFor !== " ") {
     const regex = new RegExp(wordToSeachFor, "gi");
     searchableText.innerHTML = textToSearch.replace(
       regex,
