@@ -13,10 +13,10 @@ function handleKeyDown() {
   let searchResult = textToSearch.search(wordToSeachFor);
 
   if (searchResult >= 0 && wordToSeachFor !== "") {
-    let newText = textToSearch.replace(
-      wordToSeachFor,
-      `<mark style="background-color: yellow">${wordToSeachFor}</mark>`
+    const regex = new RegExp(wordToSeachFor, "gi");
+    searchableText.innerHTML = textToSearch.replace(
+      regex,
+      (match) => `<mark style="background-color: yellow">${match}</mark>`
     );
-    searchableText.innerHTML = newText;
   }
 }
