@@ -31,7 +31,7 @@ function submit(event) {
       document.getElementById("full-stack-web-dev").value
     }</p>`;
   }
-  formDump.innerHTML += `<p>Anything Else?: ${document.getElementById("anything-else").value}</p>`;
+  formDump.innerHTML += `<p>Anything Else: ${document.getElementById("anything-else").value}</p>`;
 
   modalDump.style.display = "block";
 }
