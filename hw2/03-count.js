@@ -11,8 +11,9 @@ function handleInput() {
   let wordToSeachFor = input.value.trim();
   let textToSearch = searchableText.innerHTML;
   if (wordToSeachFor !== "" && wordToSeachFor !== " ") {
+    const regex = new RegExp(`\\b(${wordToSeachFor})\\b`, "gi");
     searchableText.innerHTML = textToSearch.replace(
-      wordToSeachFor,
+      regex,
       (match) => `<mark style="background-color: yellow">${match}</mark>`
     );
   }
