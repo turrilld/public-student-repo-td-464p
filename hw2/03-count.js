@@ -1,9 +1,9 @@
 // Add your code here
 const searchableText = document.getElementById("text-to-search");
 const input = document.getElementById("userInput");
-input.addEventListener("keyup", handleKeyDown);
+input.addEventListener("input", handleInput);
 
-function handleKeyDown() {
+function handleInput() {
   // This clears previous search results before starting the new result
   let text = searchableText.textContent || searchableText.innerText || "";
   searchableText.innerHTML = text;
