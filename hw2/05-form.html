@@ -7,14 +7,95 @@
     <title>05 - Form</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
     <script defer src="05-form.js"></script>
   </head>
-  <body>
-    <main>
-      <form>
-        <h1>Exercise 05 - Form</h1>
+  <body class="bg-dark">
+    <main class="rounded container bg-light my-4 py-4 min-vh-50" style="max-width: 500px">
+      <form id="form">
+        <h1 class="text-center my-4">Exercise 05 - Form</h1>
+        <div class="mb-3">
+          <label for="full-name" class="form-label" style="font-weight: bold">Full Name:</label>
+          <input class="form-control" type="text" id="full-name" />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label" style="font-weight: bold">Email:</label>
+          <input class="form-control" type="email" id="email" />
+        </div>
+        <div class="mb-3">
+          <label for="registration-status" class="form-label" style="font-weight: bold"
+            >Registration Status:</label
+          >
+          <select class="form-select" id="registration-status">
+            <option selected>Choose an Option</option>
+            <option value="Registered">Registered</option>
+            <option value="Waitlisted">Waitlisted</option>
+            <option value="Dropped">Dropped</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class="form-label" style="font-weight: bold">
+            Have you taken any of the following courses?
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Programming Languages"
+              id="programming-languages"
+            />
+            <label class="form-check-label" for="programming-languages">
+              Programming Languages
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Operating Systems"
+              id="operating-systems"
+            />
+            <label class="form-check-label" for="operating-systems"> Operating Systems </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Full Stack Web Development"
+              id="full-stack-web-dev"
+            />
+            <label class="form-check-label" for="full-stack-web-dev">
+              Full Stack Web Development
+            </label>
+          </div>
+        </div>
+        <div class="my-3">
+          <label for="anything-else" class="form-label" style="font-weight: bold">
+            Anything else?
+          </label>
+          <textarea class="form-control" id="anything-else" rows="3"></textarea>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-primary" style="display: block; width: 100%" id="submit">
+            Submit
+          </button>
+          <button class="btn btn-secondary" type="reset" style="display: block; width: 100%">
+            Reset
+          </button>
+        </div>
       </form>
+      <div class="modal" tabindex="-1" style="max-width: 50%; position: absolute; left: 50%;top: 50%; transform: translate(-50%, -50%);" id="modal-dump">
+        <!-- Modal content -->
+        <div class="modal-content" id="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Student Registration Info</h1>
+          </div>
+          <div class="modal-body" id="form-dump"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="modal-close">Close</button>
+        </div>
+      </div>
     </main>
   </body>
 </html>
