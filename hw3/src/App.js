@@ -3,8 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  Outlet,
+  NavLink,
 } from 'react-router-dom';
 import './style.css';
 
@@ -19,24 +18,24 @@ export default function App() {
       <nav className="nav">
         <ul className="navBar">
           <li>
-            <Link className="navLink" to="/">
+            <NavLink className="navLink" to="/">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="navLink" to="/list">
+            <NavLink className="navLink" to="/list">
               List
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="navLink" to="/population">
+            <NavLink className="navLink" to="/population">
               Population
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="navLink" to="/gdp">
+            <NavLink className="navLink" to="/gdp">
               GDP
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

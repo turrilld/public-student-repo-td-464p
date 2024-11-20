@@ -30,6 +30,11 @@ const GDP = () => {
     ],
     options: {
       maintainAspectRatio: false,
+      scales: {
+        y: {
+          type: 'logarithmic',
+        },
+      },
     },
   };
   // Chart.defaults.color = "#ff0000";

@@ -29,6 +29,9 @@ h1 {
   padding-left: 5%;
   padding-inline-end: 5%;
 }
+.navBar a.active {
+  color: darkturquoise;
+}
 
 .navLink {
   color: white;
@@ -36,11 +39,7 @@ h1 {
 }
 
 .navLink:hover {
-  color: grey;
-}
-
-.navLink:focus {
-  color: grey;
+  color: darkturquoise;
 }
 
 .card-holder {

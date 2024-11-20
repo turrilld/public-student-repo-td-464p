@@ -30,6 +30,11 @@ const Population = () => {
     ],
     options: {
       maintainAspectRatio: false,
+      scales: {
+        y: {
+          type: 'logarithmic',
+        },
+      },
     },
   };
 

@@ -35,6 +35,9 @@ const List = () => {
             >
               <Card.Img
                 variant="top"
+                alt={
+                  country.flag_alt || 'A picture of the flag of ' + country.name
+                }
                 src={country.flag_png}
                 style={{ width: '100%', height: '200px' }}
               />
@@ -42,9 +45,9 @@ const List = () => {
                 <Card.Title>{country.name}</Card.Title>
                 <Card.Text>
                   With a population of roughly{' '}
-                  {formattedNumber(country.population)} people, {country.name}{' '}
-                  Has a net GDP of {country.gdp_billions} billion dollars and
-                  the majority of its people speak{' '}
+                  {formattedNumber(country.population)}, {country.name} Has a
+                  net GDP of {country.gdp_billions || 'an unknown amount of'}{' '}
+                  billion dollars and the majority of its people speak{' '}
                   {country.official_languages[0]}
                 </Card.Text>
               </Card.Body>
